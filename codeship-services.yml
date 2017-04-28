@@ -1,0 +1,3 @@
+steps:
+  - service: app
+    command: mvn package

@@ -394,26 +394,26 @@
 			<id>bower-install</id>
   			<build>
 			<plugins>
-				<!--<plugin>-->
-					<!--<groupId>org.codehaus.mojo</groupId>-->
-					<!--<artifactId>exec-maven-plugin</artifactId>-->
-                    <!--<version>1.4.0</version>-->
-					<!--<executions>-->
-						<!--<execution>-->
-							<!--<phase>generate-sources</phase>-->
-							<!--<goals>-->
-								<!--<goal>exec</goal>-->
-							<!--</goals>-->
-						<!--</execution>-->
-					<!--</executions>-->
-					<!--<configuration>-->
-						<!--<executable>bower</executable>-->
-						<!--<arguments>-->
-							<!--<argument>install</argument>-->
-						<!--</arguments>-->
-						<!--<workingDirectory>${basedir}</workingDirectory>-->
-					<!--</configuration>-->
-				<!--</plugin>-->
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+                    <version>1.4.0</version>
+					<executions>
+						<execution>
+							<phase>generate-sources</phase>
+							<goals>
+								<goal>exec</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<executable>bower</executable>
+						<arguments>
+							<argument>install</argument>
+						</arguments>
+						<workingDirectory>${basedir}</workingDirectory>
+					</configuration>
+				</plugin>
 			</plugins>
 		  </build>
 		</profile>
@@ -421,26 +421,26 @@
             <id>less-install</id>
             <build>
                 <plugins>
-                    <!--<plugin>-->
-                        <!--<groupId>org.lesscss</groupId>-->
-                        <!--<artifactId>lesscss-maven-plugin</artifactId>-->
-                        <!--<version>1.7.0.1.1</version>-->
-                        <!--<configuration>-->
-                            <!--<sourceDirectory>${project.basedir}/src/main/webapp/resources/less</sourceDirectory>-->
-                            <!--<outputDirectory>${project.basedir}/src/main/webapp/resources/css</outputDirectory>-->
-                            <!--<compress>true</compress>-->
-                            <!--<includes>-->
-                                <!--<include>petclinic.less</include>-->
-                            <!--</includes>-->
-                        <!--</configuration>-->
-                        <!--<executions>-->
-                            <!--<execution>-->
-                                <!--<goals>-->
-                                    <!--<goal>compile</goal>-->
-                                <!--</goals>-->
-                            <!--</execution>-->
-                        <!--</executions>-->
-                    <!--</plugin>-->
+                    <plugin>
+                        <groupId>org.lesscss</groupId>
+                        <artifactId>lesscss-maven-plugin</artifactId>
+                        <version>1.7.0.1.1</version>
+                        <configuration>
+                            <sourceDirectory>${project.basedir}/src/main/webapp/resources/less</sourceDirectory>
+                            <outputDirectory>${project.basedir}/src/main/webapp/resources/css</outputDirectory>
+                            <compress>true</compress>
+                            <includes>
+                                <include>petclinic.less</include>
+                            </includes>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>compile</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
                 </plugins>
             </build>
         </profile>
@@ -497,24 +497,24 @@
                 </activation>
                 <build>
                     <plugins>
-                        <!--<plugin>-->
-                            <!--<groupId>org.apache.maven.plugins</groupId>-->
-                            <!--<artifactId>maven-checkstyle-plugin</artifactId>-->
-                            <!--<executions>-->
-                                <!--<execution>-->
-                                    <!--<id>checkstyle</id>-->
-                                    <!--<phase>test</phase>-->
-                                    <!--<goals>-->
-                                        <!--<goal>check</goal>-->
-                                    <!--</goals>-->
-                                <!--</execution>-->
-                            <!--</executions>-->
-                        <!--</plugin>-->
-                        <!--<plugin>-->
-                            <!--<groupId>org.eluder.coveralls</groupId>-->
-                            <!--<artifactId>coveralls-maven-plugin</artifactId>-->
-                            <!--<version>4.3.0</version>-->
-                        <!--</plugin>-->
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-checkstyle-plugin</artifactId>
+                            <executions>
+                                <execution>
+                                    <id>checkstyle</id>
+                                    <phase>test</phase>
+                                    <goals>
+                                        <goal>check</goal>
+                                    </goals>
+                                </execution>
+                            </executions>
+                        </plugin>
+                        <plugin>
+                            <groupId>org.eluder.coveralls</groupId>
+                            <artifactId>coveralls-maven-plugin</artifactId>
+                            <version>4.3.0</version>
+                        </plugin>
                     </plugins>
                 </build>
             </profile>
